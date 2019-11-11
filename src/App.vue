@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <svg-icon icon-class="wx"></svg-icon>
-    <svg-icon icon-class="hg"></svg-icon>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- 路由 -->
+    <div id="nav">
+      <router-link to="/">
+        <svg-icon icon-class="wx"></svg-icon>
+        <!-- <svg>
+          <use xlink:href="#icon-wx"></use>
+        </svg>-->
+        Home
+      </router-link>|
+      <router-link to="/about">
+        <svg-icon icon-class="hg"></svg-icon>About
+      </router-link>
+    </div>
+    <!-- 4.路由视图 -->
+    <!-- 问题：router-link和router-view是哪来的 -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import "./icons";
 export default {
   name: "app",
-  components: {
-    HelloWorld
-  }
+  components: {}
 };
 </script>
 
