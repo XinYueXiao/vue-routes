@@ -1,6 +1,8 @@
 import router from "./router";
 import store from "./store";
+
 const whiteList = ["/home", "/login"]; // 无需令牌白名单
+
 // 全局路由守卫
 router.beforeEach(async (to, from, next) => {
     // 获取令牌判断用户是否登录

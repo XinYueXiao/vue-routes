@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import "./icons";
 import './permission'
+import vPermission from "./directive/permission";
+import './plugins/element.js'
 Vue.config.productionTip = false
-
+Vue.directive("permission", vPermission);
 new Vue({
   router,
   store,
